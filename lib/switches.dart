@@ -1,16 +1,19 @@
+enum Medal { gold, silver, brone, noMedal }
+
 void main() {
-  const pos = 1;
-  switch (pos) {
-    case 1:
+  const medal = Medal.gold;
+
+  switch (medal) {
+    case Medal.gold:
       print('Gold');
       break;
-    case 2:
+    case Medal.silver:
       print('Silver');
       break;
-    case 3:
+    case Medal.brone:
       print('Bronze');
       break;
-    default:
+    case Medal.noMedal:
       print('No medal');
       break;
   }
