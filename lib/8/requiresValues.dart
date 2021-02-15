@@ -1,3 +1,4 @@
+// null safety is required to be on for this
 void main() {
   final person = describe(name: 'Hank', age: 32);
   print(person);
