@@ -1,20 +1,17 @@
 void main() {
   const list = [1, 2, 3];
-  list.forEach(print);
-
-  // Using map makes it much easier to transform data
-  // final List doubles = list.map((value) => value * 2).toList();
+  const list2 = [1.0, 2.0, 3.0];
 
   final doubles = transform(list, (x) => x * 2);
 
   print(doubles);
 }
 
-// Using anonymous functions for better code resuse
-List<int> transform(List<int> items, int Function(int) f) {
-  var result = <int>[];
+// Using generic types to allow various types
+List<T> transform<T>(List<T> items, T Function(T) f) {
+  var result = <T>[];
   for (var x in items) {
-    result.add(f(x * 2));
+    result.add(f(x));
   }
   return result;
 }
